@@ -8,7 +8,7 @@
 <br>
   <br>
 <p align="center">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=prgayake&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark" alt="ovi" />
+  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=prgayake&show_icons=true&locale=en&layout=compact&theme=chartreuse-dark" alt="ovi" /> 
   <img align="" src="https://github-readme-streak-stats.herokuapp.com/?user=prgayake&theme=tokyonight" alt="mystreak"/>
   </p>
  </br>
