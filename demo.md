@@ -60,8 +60,9 @@ Commonly-used primaries include:
 | `-cmin n` |              find's all the files which are modified in the last 1 hour.|
 | ` -newer file` |              find's   file was modified more recently than file.|
 | `-size n` |             File uses n units of space, rounding up.|
-  
-*Note: To Know More about `find` commmand and its options [click here](https://en.wikipedia.org/wiki/Find_(Unix)) or Type the following command in terminal 👇*
+
+### Help Command
+Run below command to view the complete guide to `find` command or [click here](https://en.wikipedia.org/wiki/Find_(Unix)).
 ```[linux]
 man find
 ```
