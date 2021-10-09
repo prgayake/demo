@@ -54,7 +54,7 @@ Commonly-used primaries include:
 | `d`            | directory                                                                      |
 | `f`           | regular file |
 | `l`             | Symbolic link                                                                        |
-| `-print`              | always returns true; prints the name of the current file plus a newline to the stdout.  |
+
 | `-mtime n`              | find's all the files which are modified n days back. |
 | `-atime n`              | find's all the files which are accessed 50 days back. |
 | `-cmin n` |              find's all the files which are modified in the last 1 hour.|
