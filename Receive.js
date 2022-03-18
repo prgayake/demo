@@ -26,18 +26,17 @@ sqs.receiveMessage(params, function(err, data) {
     console.log("Receive Error", err);
   } else if (data.Messages) {
     console.log("Success :", data.Messages[0].MessageAttributes.Title.StringValue);
-   
+    var deleteParams = {
+      QueueUrl: queueURL,
+      ReceiptHandle: data.Messages[0].ReceiptHandle
+    };
+    sqs.deleteMessage(deleteParams, function(err, data) {
+      if (err) {
+        console.log("Delete Error", err);
+      } else {
+        console.log("Message Deleted", data);
+      }
+    });
   }
-  //delete the message from queue
-  var deleteParams = {
-    QueueUrl: queueURL,
-    ReceiptHandle: data.Messages[0].ReceiptHandle
-  };
-  sqs.deleteMessage(deleteParams, function(err, data) {
-    if (err) {
-      console.log("Delete Error", err);
-    } else {
-      console.log("Message Deleted", data);
-    }
-  });
+
 });
