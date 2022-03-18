@@ -6,7 +6,7 @@ AWS.config.update({region: 'REGION'});
 // Create an SQS service object
 var sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
-var queueURL = "https://sqs.ap-south-1.amazonaws.com/304089859339/myqueue";
+var queueURL = "https://sqs.ap-south-1.amazonaws.com/000263543451/TestQueue";
 
 var params = {
  AttributeNames: [
@@ -28,4 +28,16 @@ sqs.receiveMessage(params, function(err, data) {
     console.log("Success :", data.Messages[0].MessageAttributes.Title.StringValue);
    
   }
+  //delete the message from queue
+  var deleteParams = {
+    QueueUrl: queueURL,
+    ReceiptHandle: data.Messages[0].ReceiptHandle
+  };
+  sqs.deleteMessage(deleteParams, function(err, data) {
+    if (err) {
+      console.log("Delete Error", err);
+    } else {
+      console.log("Message Deleted", data);
+    }
+  });
 });
