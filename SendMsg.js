@@ -6,19 +6,28 @@ AWS.config.update({region: 'ap-south-1'});
 // Create an SQS service object
 var sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
+
 var params = {
    // Remove DelaySeconds parameter and value for FIFO queues
   DelaySeconds: 10,
   MessageAttributes: {
     "Title": {
       DataType: "String",
-      StringValue: "Pradyumna"
+      StringValue: "name"
     },
     "Author": {
       DataType: "String",
       StringValue: "John Grisham"
     },
     "WeeksOn": {
+      DataType: "Number",
+      StringValue: "6"
+    },
+    "ID": {
+      DataType: "String",
+      StringValue: "John Grisham"
+    },
+    "duedate": {
       DataType: "Number",
       StringValue: "6"
     }

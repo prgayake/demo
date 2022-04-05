@@ -39,41 +39,41 @@
 			    <h2 class="form-heading text-center">Add Book Details</h2>
 			    <div class="form-intro text-center mb-3"> <br></div>
 			    <div class="form-wrapper mx-auto">					
-					<form class="signup-form row g-2 align-items-center">
+					<form class="signup-form row g-2 align-items-center" action="/sendData" method="post">
 	                    <div class="col-12  ">
 	                        <label class="sr-only" for="semail">Book Name</label>
                             <label class="item-title">Book Name</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter Book Name">
+	                        <input type="text" id="semail" name="bookname" class="form-control me-md-1 semail" placeholder="Enter Book Name">
 	                    </div>
                         <div class="col-12 ">
 	                        <label class="sr-only" for="semail">Book ID</label>
                             <label class="item-title">Book ID</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter Book ID">
+	                        <input type="text" id="semail" name="bookid" class="form-control me-md-1 semail" placeholder="Enter Book ID">
 	                    </div>
                         <div class="col-12 ">
 	                        <label class="sr-only" for="semail">Author</label>
                             <label class="item-title">Author</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter Author">
+	                        <input type="text" id="semail" name="auther" class="form-control me-md-1 semail" placeholder="Enter Author">
 	                    </div>
                         <div class="col-12 ">
 	                        <label class="sr-only" for="semail">Book Issued To</label>
                             <label class="item-title">Book Issued To</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Name Of Student">
+	                        <input type="text" id="semail" name="bookissueto" class="form-control me-md-1 semail" placeholder="Name Of Student">
 	                    </div>
                         <div class="col-12 ">
 	                        <label class="sr-only" for="semail">Student Id</label>
                             <label class="item-title">Student Id</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter ID of Student">
+	                        <input type="text" id="semail" name="studentid" class="form-control me-md-1 semail" placeholder="Enter ID of Student">
 	                    </div>
                         <div class="col-lg-6 ">
 	                        <label class="sr-only" for="semail">Issue Date</label>
                             <label class="item-title">Issue Date</label>
-	                        <input type="date" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter Date Of issue">
+	                        <input type="date" id="semail" name="issuedate" class="form-control me-md-1 semail" placeholder="Enter Date Of issue">
 	                    </div>
                         <div class="col-lg-6 ">
 	                        <label class="sr-only" for="semail">Due Date</label>
                             <label class="item-title">Due Date</label>
-	                        <input type="date" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Enter Due Date">
+	                        <input type="date" id="semail" name="duedate" class="form-control me-md-1 semail" placeholder="Enter Due Date">
 	                    </div>
 	                    <div class="col-12 col-lg-3">
 	                        <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>

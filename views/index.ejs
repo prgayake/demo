@@ -1,265 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
+<head>
+    <title>DevBook - Bootstrap 5 Book/eBook Landing Page Template For Developers</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
 
- <%- include('./Assets/header'); %>
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
-<body onload="myFunction()">
-<div id="loading"></div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <%=  Username%>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                        
-                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
-                    </ul>
-            </ul>
-            </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <a class="nav-link" id="l10" href="/personal">Personal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="l10" href="/startup">Basic</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="l10" href="/team">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="l10" href="/ip_form">IP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " id="l10" href="/Businessmodel">Business Model</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" id="l10" href="/finance">Financials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="l10" href="/Upload_form">Uploads</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--        start of form           -->
-    <div class="container" id="c1">
-        <div class="info">
-            <p> Note : <img src="info.png" class="info-icon" id="a1" align="info"> Symbol will Tell you More About the Given Field .</p>
-            <p> Note : Field with ( <span id="req1">*</span> ) Marked are the Required One .</p>
-            <p> Note : Upload document limit should not exceed 1 MB .</p>
-        </div>
-        <h6 class="display-6">Financials</h6>
-        <br>
-        <form action="/finance" method="POST" enctype="multipart/form-data" class="row g-3 needs-validation" id="basic-form">
-            <div class="col-md-6">
-                <label for="fUniquenessFactor" class="form-label">Maximum Turnover of Any of the Previous Three Financial Years</label><span id="req1">*</span>
-                <img src="info.png" class="info-icon" onclick="myup9()" id="a1" align="info">
-        <p id="demo9"></p>
-        <script>
-            function myup9() {
-                document.getElementById("demo9").innerHTML = "Mention amount of funds available. <img src='cross.jpg' class='info-icon' onclick='myup19()' id='a1' align='info'>";
-            }
-            function myup19() {
-                document.getElementById("demo9").innerHTML = " ";
-            }
-        </script>
-                
-                <!-- <a data-bs-toggle="tooltip" data-bs-placement="top" title="c"><img src="info.png" class="info-icon" id="a1" align="info"> </a> -->
-                <select name="max_turnover" class="form-select" aria-label="Default select example" required>
-                    <option value="" class="" selected="selected">-- Select an option--</option>
-                    <option label="Less than 50 lakh" value="Less than 50 lakh">Less than 50 lakh</option>
-                    <option label="Between 50 lakh &amp; 1 Cr" value="Between 50 lakh &amp; 1 Cr">Between 50 lakh &amp; 1 Cr</option>
-                    <option label="Between 1 Cr &amp; 5 Cr" value="Between 1 Cr &amp; 5 Cr">Between 1 Cr &amp; 5 Cr</option>
-                    <option label="Between 5 Cr &amp; 10 Cr" value="Between 5 Cr &amp; 10 Cr">Between 5 Cr &amp; 10 Cr</option>
-                    <option label="Between 10 Cr &amp; 25 Cr" value="Between 10 Cr &amp; 25 Cr">Between 10 Cr &amp; 25 Cr</option>
-                    <option label="Between 25-100 Crore" value="Between 25-100 Crore">Between 25-100 Crore</option>
-                    <option label="Over 100 Crore" value="number:6">Over 100 Crore</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="fKeyPartners" class="form-label">What is the Startup’s Current Funding Status?</label><span id="req1">*</span>
-                <img src="info.png" class="info-icon" onclick="myup6()" id="a1" align="info">
-        <p id="demo6"></p>
-        <script>
-            function myup6() {
-                document.getElementById("demo6").innerHTML = "Specify last source -Name of firm/invester <img src='cross.jpg' class='info-icon' onclick='myup16()' id='a1' align='info'>";
-            }
-            function myup16() {
-                document.getElementById("demo6").innerHTML = " ";
-            }
-        </script>
-                <!-- <a data-bs-toggle="tooltip" data-bs-placement="top" title="Specify last source -Name of firm/invester"><img src="info.png" class="info-icon" id="a1" align="info"> </a> -->
-                <select name="current_funding" class="form-select" aria-label="Default select example" required>
-                    <option value="" class="" selected="selected">-- Select an option--</option>
-                    <option label="Equity" value="Equity">Equity</option>
-                    <option label="Debt" value="Debt">Debt</option>
-                    <option label="Awards" value="Awards">Awards</option>
-                    <option label="Bootstrapped" value="Bootstrapped">Bootstrapped</option>
-                </select>
-            </div>
-            <div class="col-md-12">
-                <label for="fCostStructure" class="form-label">Total Funds Received Since Incorporation</label>
-                <select name="total_funds" class="form-select" aria-label="Default select example">
-                    <option value="" class="" selected="selected">-- Select an option--</option>
-                    <option label="0 To 1 Cr" value="0 To 1 Cr">0 To 1 Cr</option>
-                    <option label="1 To 3 Cr" value="1 To 3 Cr">1 To 3 Cr</option>
-                    <option label="3 To 10 Cr" value="3 To 10 Cr">3 To 10 Cr</option>
-                    <option label="Above 10 Cr" value="Above 10 Cr">Above 10 Cr</option>
-                </select>
-            </div>
-            <br>
-            <hr>
-            <p><b>Financial Details of last 3 Years (if any)</b>
-                <img src="info.png" class="info-icon" onclick="myup7()" id="a1" align="info">
-                <!-- <a data-bs-toggle="tooltip" data-bs-placement="top" title="Financial Details like Balance Sheet / Audit Statement (if any)"><img src="info.png" class="info-icon" id="a1" align="info"> </a>--></p> 
-                
-        <p id="demo7"></p>
-        <script>
-            function myup7() {
-                document.getElementById("demo7").innerHTML = "Financial Details like Balance Sheet / Audit Statement (if any). <img src='cross.jpg' class='info-icon' onclick='myup17()' id='a1' align='info'>";
-            }
-            function myup17() {
-                document.getElementById("demo7").innerHTML = " ";
-            }
-        </script>
-            <div class="row g-3">
-                <div class=" col-md-4">
-                    <label for="inputPassword4" class="form-label">Financial Year</label>
-                    <input name="Financial_year" type="text" class="form-control" id="inputEmail4">
-                </div>
-                <div class=" col-md-4">
-                    <label for="inputPassword4" class="form-label">Audited Financial Numbers(in INR)</label>
-                    <input name="Audited_fn" type="text" class="form-control" id="inputEmail4">
-                </div>
-                <div class=" col-md-4">
-                    <label for="inputPassword4" class="form-label">Upload Proof(Audited statement from CA)</label>
-                    <input class="form-control" onchange="validateSize(this)" name="media" type="file" id="formFile">
-                </div>
-                <script>function validateSize(input) {
-                    const fileSize = input.files[0].size / 1024; // in MiB
-                    if (fileSize > 2) {
-                      alert('File size exceeds 1 MB');
-                      // $(file).val(''); //for clearing with Jquery
-                    } else {
-                      // Proceed further
-                    }
-                  }</script>
-                <div class="field_wrapper">
-                    <div>
-                        <a href="javascript:void(0);" class="add_button" title="Add field"><img src="add.png" id="a2"></a>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">
-            $(document).ready(function() {
-                var maxField = 10; //Input fields increment limitation
-                var addButton = $('.add_button'); //Add button selector
-                var wrapper = $('.field_wrapper'); //Input field wrapper
-                var fieldHTML = '<div><div class="row"><div class=" col-md-4 a3"><input type="text" name="Financial_year" class="form-control" id="inputEmail4" placeholder="Financial Year"></div><div class=" col-md-4 a3"><input type="text" name="Audited_fn" class="form-control" id="inputEmail4"  placeholder="Audited_financial number "></div><div class=" col-md-4 a3"><input name="media"  class="form-control" type="file" id="formFile" ></div><a href="javascript:void(0);" class="remove_button"><img src="cross.jpg" id="a2"></a></div></div>'; //New input field html 
-                var x = 1; //Initial field counter is 1
-                //Once add button is clicked
-                $(addButton).click(function() {
-                    //Check maximum number of input fields
-                    if (x < maxField) {
-                        x++; //Increment field counter
-                        $(wrapper).append(fieldHTML); //Add field html
-                    }
-                });
-                //Once remove button is clicked
-                $(wrapper).on('click', '.remove_button', function(e) {
-                    e.preventDefault();
-                    $(this).parent('div').remove(); //Remove field html
-                    x--; //Decrement field counter
-                });
-            });
-            </script>
-            <div class="col-md-5"></div>
-            <div class="col-md-7">
-                <button type="submit" id="btn1" class="btn btn-primary">Submit</button>
+</head> 
 
-            </div>
-        
-        <script>
-  
-          var username = '<%= Username%>';
-  
+<body>    
+    <header class="header">	    
+        <div class="branding">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/site-logo.svg" alt="logo" ><span class="logo-text">DevBook</span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+				    <div class="promo pe-md-3 pe-lg-5">
+					    <h1 class="headline mb-3">
+						    My Library  <br>Get all Books Here
+					    </h1><!--//headline-->
+					    <div class="subheadline mb-4">
+						    
+					    </div><!--//subheading-->
+					    
+					    <div class="cta-holder row gx-md-3 gy-3 gy-md-0">
+						    <div class="col-12 col-md-auto">
+						        <a class="btn btn-primary w-100" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Buy for $20</a>
+						    </div>
+						    <div class="col-12 col-md-auto">
+						        <a class="btn btn-secondary scrollto w-100" href="#benefits-section">Learn More</a>
+						    </div>
+					    </div><!--//cta-holder-->
+					    
+					    <div class="hero-quotes mt-5">
+						    <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-bs-ride="carousel" data-bs-interval="8000">
+								<ol class="carousel-indicators">
+									<li data-bs-target="#quotes-carousel" data-bs-slide-to="0" class="active"></li>
+									<li data-bs-target="#quotes-carousel" data-bs-slide-to="1"></li>
+									<li data-bs-target="#quotes-carousel" data-bs-slide-to="2"></li>
+								</ol>
+							  
+							    <div class="carousel-inner">
+								    <div class="carousel-item active">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Excellent Book! Add your book reviews here consectetur adipiscing elit. Aliquam euismod nunc porta urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae, auctor imperdiet nisi."     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile" src="assets/images/profiles/profile-1.png" alt="image" >
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">James Doe</div>
+										        <div class="soure-title">Co-Founder, Startup Week</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Highly recommended consectetur adipiscing elit. Proin et auctor dolor, sed venenatis massa. Vestibulum ullamcorper lobortis nisi non placerat praesent mauris neque"     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile" src="assets/images/profiles/profile-2.png" alt="image" >
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">Jean Doe</div>
+										        <div class="soure-title">Co-Founder, Startup Week</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								    <div class="carousel-item">
+								        <blockquote class="quote p-4 theme-bg-light">
+									        "Awesome! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod nunc porta urna facilisis tempor. Praesent mauris neque, viverra quis erat vitae."     
+								        </blockquote><!--//item-->
+								        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+									        <div class="col-12 col-md-auto text-center text-md-start">
+									            <img class="source-profile" src="assets/images/profiles/profile-3.png" alt="image" >
+									        </div><!--//col-->
+									        <div class="col source-info text-center text-md-start">
+										        <div class="source-name">Andy Doe</div>
+										        <div class="soure-title">Frontend Developer, Company Lorem</div>
+										    </div><!--//col-->
+								        </div><!--//source-->
+								    </div><!--//carousel-item-->
+								</div><!--//carousel-inner-->
+							</div><!--//quotes-carousel-->
+							
+					    </div><!--//hero-quotes-->
+				    </div><!--//promo-->
+			    </div><!--col-->
+			    <div class="col-12 col-md-5 mb-5 align-self-center">
+				    <div class="book-cover-holder">
+					    <img class="img-fluid book-cover" src="assets/images/devbook-cover.png" alt="book cover" >
+					    <div class="book-badge d-inline-block shadow">
+						    New<br>Release
+					    </div>
+				    </div><!--//book-cover-holder-->
+				    <div class="text-center"><a class="theme-link scrollto" href="#reviews-section">See all book reviews</a></div>
+			    </div><!--col-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//hero-section-->
+    
+    <section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5">
+	    <div class="container py-5">
+		    <h2 class="section-heading text-center mb-3">What Will You Get From This Book?</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. Orci varius natoque penatibus et magnis. </div>
+		    <div class="row text-center">
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-laptop-code"></i></div>
+						    <h3 class="item-heading">Build Lorem Ipsum lobortis nec mauris habitant morbi</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. 
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-js-square"></i></div>
+						    <h3 class="item-heading">Learn from lorem ipsum dolor sit amet consectetur</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes.
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-rocketchat"></i></div>
+						    <h3 class="item-heading">Discover phasellus id egestas tellus maximus</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fab fa-angular"></i></div>
+						    <h3 class="item-heading">Master aliquet augue ac ipsum lobortis interdum</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-code-branch"></i></div>
+						    <h3 class="item-heading">Deploy elementum mauris tincidunt tempus sagittis</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-md-6 col-lg-4">
+				    <div class="item-inner p-3 p-lg-4">
+					    <div class="item-header mb-3">
+						    <div class="item-icon"><i class="fas fa-hand-holding-usd"></i></div>
+						    <h3 class="item-heading">Become mattis est et mauris tempus non imperdiet</h3>
+					    </div><!--//item-heading-->
+					    <div class="item-desc">
+						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+					    </div><!--//item-desc-->
+				    </div><!--//item-inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+    <section id="content-section" class="content-section">
+	    <div class="container">
+		    <div class="single-col-max mx-auto">
+		    <h2 class="section-heading text-center mb-5">What's Included</h2>
+			    <div class="row">
+				    <div class="col-12 col-md-6">
+					    <div class="figure-holder mb-5">
+						    <img class="img-fluid" src="assets/images/devbook-devices.png" alt="image" >
+					    </div><!--//figure-holder-->
+				    </div><!--//col-->
+				    <div class="col-12 col-md-6 mb-5">
+					    <div class="key-points mb-4 text-center">
+						    <ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-start">
+							    <li><i class="fas fa-check-circle me-2"></i>List your book's content here.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>PDF fermentum tincidunt erat.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>EPUB curabitur fermentum.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Lorem ipsum dolor sit amet.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Praesent molestie odio risus. </li>
+							    <li><i class="fas fa-check-circle me-2"></i>Kindle curabitur fermentum.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Kindle curabitur fermentum.</li>
+							    <li><i class="fas fa-check-circle me-2"></i>Kindle curabitur fermentum.</li>
+						    </ul>
+						    <div class="text-center"><a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">I want this book</a></div>
+					    </div><!--//key-points-->
+					    
+				    </div><!--//col-12-->   
+			    </div><!--//row-->
+		    </div><!--//single-col-max-->
+	    </div><!--//container-->
+    </section><!--//content-section-->
+    
+    <section id="audience-section" class="audience-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center mb-4">Who This Book Is For</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">
+			    List your target readers in this section and back up with reviews. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie. Vivamus hendrerit nisi condimentum erat tempus, vitae accumsan odio euismod.
+		    </div><!--//section-intro-->
+		    <div class="audience mx-auto">
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Software Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->			    
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">App Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->			    
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Web Developers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->
+			    <div class="item row gx-3">
+				    <div class="col-auto item-icon"><i class="fas fa-user-check"></i></div>
+				    <div class="col">
+					    <h4 class="item-title">Product Designers</h4>
+					    <div class="item-desc">Learn lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales sit amet neque sit amet molestie.</div>
+				    </div><!--//col-->
+			    </div><!--//item-->
+		    </div><!--//audience-->
+	    </div><!--//container-->
+    </section><!--//audience-section-->
+    
+    <section id="form-section" class="form-section">
+	    <div class="container">
+		    <div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
+			    <h2 class="form-heading text-center">Get A Free Preview</h2>
+			    <div class="form-intro text-center mb-3">Sign up to get a free preview of the book. <br>You can offer visitors free book previews to generate leads.</div>
+			    <div class="form-wrapper mx-auto">					
+					<form class="signup-form row g-2 align-items-center">
+	                    <div class="col-12 col-lg-9">
+	                        <label class="sr-only" for="semail">Email</label>
+	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Your email">
+	                    </div>
+	                    <div class="col-12 col-lg-3">
+	                        <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>
+	                    </div>
+	                </form><!--//signup-form-->
+			    </div><!--//form-wrapper-->
+		    </div><!--//lead-form-wrapper-->
+	    </div><!--//container-->
+    </section><!--//form-section-->
+    
+    <section id="reviews-section" class="reviews-section py-5">
+	    <div class="container">
+		    <h2 class="section-heading text-center">Book Reviews</h2>
+		    <div class="section-intro text-center single-col-max mx-auto mb-5">See what our readers are saying. </div>
+		    <div class="row justify-content-center">
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    
+					    <blockquote class="quote">
+					        "Excellent Book! Add your book review here consectetur adipiscing elit. Aliquam euismod nunc porta urna facilisis tempor. "     
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-1.png" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">James Doe</div>
+						        <div class="soure-title">Co-Founder, Startup Week</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					        "Great Book! Add your book review here consectetur adipiscing elit. Aliquam euismod nunc porta urna facilisis tempor. Praesent mauris neque."     
+				        </blockquote><!--//item-->				        
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-2.png" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Jean Doe</div>
+						        <div class="soure-title">Co-Founder, Company Tristique</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        
+				         <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					        "Excellent Book! Add your book review here consectetur adipiscing elit. Pellentesque ac leo turpis. Phasellus imperdiet id ligula tempor imperdiet."     
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-3.png" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Tom Doe</div>
+						        <div class="soure-title">Product Designer, Company Lorem</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				         <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					        "Another book review here consectetur adipiscing elit. Pellentesque ac leo turpis. Phasellus imperdiet id ligula tempor imperdiet."     
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-4.png" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Alice Doe</div>
+						        <div class="soure-title">App Developer, Company Ipsum</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+			    <div class="item col-12 col-lg-4 p-3 mb-4">
+				    <div class="item-inner theme-bg-light rounded p-4">
+					    <blockquote class="quote">
+					        "Another book review here consectetur adipiscing elit. Pellentesque ac leo turpis. Phasellus imperdiet id ligula tempor imperdiet."     
+				        </blockquote><!--//item-->
+				        <div class="source row gx-md-3 gy-3 gy-md-0 align-items-center">
+					        <div class="col-12 col-md-auto text-center text-md-start">
+					            <img class="source-profile" src="assets/images/profiles/profile-5.png" alt="image" >
+					        </div><!--//col-->
+					        <div class="col source-info text-center text-md-start">
+						        <div class="source-name">Sam Doe</div>
+						        <div class="soure-title">Co-Founder, Company Integer</div>
+						    </div><!--//col-->
+				        </div><!--//source-->
+				        <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
+				    </div><!--//inner-->
+			    </div><!--//item-->
+		    </div><!--//row-->
+		    <div class="text-center">
+		        <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/">Get Your Copy Today</a>
+		    </div>
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+    
+    <section id="author-section" class="author-section section theme-bg-primary py-5">
+	    <div class="container py-3">
+		    <div class="author-profile text-center mb-5">
+			    <img class="author-pic" src="assets/images/profiles/author-profile.png" alt="image" >
+		    </div><!--//author-profile-->
+		    <h2 class="section-heading text-center text-white mb-3">About The Author</h2>
+		    <div class="author-bio single-col-max mx-auto">
+			    <p>This book landing page template is made by product designer <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers. You can use this template to self-publish and promote your book/ebook. You can easily use platforms such as <a class="theme-link" href="https://gumroad.com/" target="_blank">Gumroad</a> to handle your book payment and delivery.</p>
+			    <p> This template is 100% FREE as long as you <strong>keep the footer attribution link</strong>. You do not have the rights to resell, sublicense or redistribute (even for free) the template on its own or as a separate attachment from any of your work. If you’d like to use this template without the footer attribution link, you can buy the <a class="theme-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devbook-free-bootstrap-5-book-ebook-landing-page-template-for-developers/" target="_blank"><strong>commercial license</strong></a>.</p>
+			    <div class="author-links text-center pt-4">
+			        <h5 class="text-white mb-4">Follow Author</h5>
+				    <ul class="social-list list-unstyled">
+					    <li class="list-inline-item"><a href="https://twitter.com/3rdwave_themes"><i class="fab fa-twitter"></i></a></li>
+					    <li class="list-inline-item"><a href="https://github.com/xriley"><i class="fab fa-github-alt"></i></a></li> 
+			            <li class="list-inline-item"><a href="https://medium.com/@3rdwave_themes"><i class="fab fa-medium-m"></i></a></li>
+			            
+			            <li class="list-inline-item"><a href="https://themes.3rdwavemedia.com/"><i class="fas fa-globe-europe"></i></a></li>
+			        </ul><!--//social-list-->
+			    </div><!--//author-links-->
+			    
+		    </div><!--//author-bio-->
+		    
+	    </div><!--//container-->
+    </section><!--//author-section-->
+    
+    
 
-          console.log(username);
-  
-          firebase.initializeApp(firebaseConfig);
-  
-          var db = firebase.database().ref();
-          db.child('finance').child(username).on('value', snap2 => {
-  
-            if (snap2.val() != null) {
-              document.getElementById("btn1").disabled = true;
-  
-            }
-  
-          })
-        </script>
-    </div>
-    </form>
-    </div>
-    <!--                    end of form                      -->
-    <br><br>
-    <!-- End Subscribe & Social Links Widget -->
-    <!-- Start Copyright -->
-    <div class="footer-clean">
-        <footer class="l9">
-            
-        </footer>
-    </div>
-    <!-- End Footer -->
-    <!-- End Container -->
-    <!-- Go To Top Link -->
-    <script>
-    $(document).ready(function() {
-        $("#basic-form").validate();
-    });
-    </script>
+    <footer class="footer">
 
-  <script>
-  var preloader = document.getElementById("loading");
-    function myFunction(){
-      preloader.style.display = 'none';
-    };
-  </script>
-  <style type="text/css">
-  #loading{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #fff
-  url('https://flevix.com/wp-content/uploads/2019/07/Comp-2.gif')
-   no-repeat center center; 
-  z-index: 99999;
-}
+	    <div class="footer-bottom text-center py-5">
 
-</style>
-
-
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+ 
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/plugins/smoothscroll.min.js"></script> 
+    
+    <script src="assets/js/main.js"></script>
 
 </body>
-
-</html>
-
+</html> 
 
