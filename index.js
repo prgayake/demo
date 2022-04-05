@@ -9,6 +9,12 @@ AWS.config.update({
     region: 'ap-south-1'
 });
 
+
+// Create the Service interface for DynamoDB
+var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
+// Create the Document Client interface for DynamoDB
+var ddbDocumentClient = new AWS.DynamoDB.DocumentClient();
 // Create an SQS service object
 var sqs = new AWS.SQS({
     apiVersion: '2012-11-05'
@@ -90,6 +96,22 @@ app.post('/sendData', (req, res) => {
         }
     });
 
+});
+
+app.get('/table', (req, res) => {
+    async function scanForResults(){
+        try {
+            var params = {
+                TableName: "Library"
+            };
+            var result = await dynamodb.scan(params).promise()
+            // console.log(result.Items[0].BookId.S)
+            res.render('table', {data: result.Items});
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    scanForResults()
 });
 
 app.listen(3000, () => {

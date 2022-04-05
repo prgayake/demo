@@ -39,30 +39,28 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">BookId</th>
+            <th scope="col">BookName</th>
+            <th scope="col">Auther</th>
+            <th scope="col">BookIssueTo</th>
+            <th scope="col">StudentId</th>
+            <th scope="col">IssueDate</th>
+            <th scope="col">Duedate</th>
           </tr>
         </thead>
         <tbody>
+          <% data.forEach(function(data){%>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
+            <th scope="row"><%= data.BookId.S %></th>
+            <td><%= data.BookName.S %></td>
+            <td><%= data.Auther.S %></td>
+            <td><%= data.BookIssueTo.S %></td>
+            <td><%= data.StudentId.S %></td>
+            <td><%= data.IssueDate.S %></td>
+            <td><%= data.Duedate.S %></td>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          <%})%>
+
         </tbody>
       </table>
 </body>
